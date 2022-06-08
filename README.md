@@ -20,5 +20,10 @@ npm run build
 npm run lint
 ```
 
+### Serve Database
+```
+npm run db:serve
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
