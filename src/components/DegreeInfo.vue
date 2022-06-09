@@ -8,12 +8,12 @@
     <div v-for="degree in degrees" :key="degree.id" class="schools">
       <h2>{{ degree.school }}</h2>
       <ul>
-        <li>first: {{ degree.firstName }}</li>
-        <li>last: {{ degree.lastName }}</li>
-        <li>student ID: {{ degree.studentID }}</li>
-        <li>program: {{ degree.program }}</li>
-        <li>degree type: {{ degree.type }}</li>
-        <li>conferred: {{ degree.conferred }}</li>
+        <li>first: <strong>{{ degree.firstName }}</strong></li>
+        <li>last: <strong>{{ degree.lastName }}</strong></li>
+        <li>student ID: <strong>{{ degree.studentID }}</strong></li>
+        <li>program: <strong>{{ degree.program }}</strong></li>
+        <li>degree type: <strong>{{ degree.type }}</strong></li>
+        <li>conferred: <strong>{{ degree.conferred }}</strong></li>
       </ul>
     </div>
     <div v-if="error">{{ error }}</div>

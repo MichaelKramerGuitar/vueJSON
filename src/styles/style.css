@@ -18,13 +18,13 @@ body {
 
 @keyframes gradient {
     0% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
     50% {
         background-position: 100% 50%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
 }
 ul {
@@ -35,3 +35,21 @@ ul {
 .schools {
     border: 0.5rem solid #2c3e50;
 }
+
+/*
+Button modified from:
+
+https://codepen.io/derekmorash/pen/XddZJY
+*/
+button {
+    font-family: sans-serif, "system ui";
+    border-color: lightskyblue;
+    color: #fff;
+    box-shadow: 0 0 40px 40px dodgerblue inset, 0 0 0 0 lightblue;
+    transition: all 150ms ease-in-out;
+}
+
+button:hover {
+     box-shadow: 0 0 10px 0 deepskyblue inset, 0 0 10px 4px cornflowerblue;
+ }
+
