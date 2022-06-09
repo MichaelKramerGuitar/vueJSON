@@ -40,7 +40,11 @@ export default {
       const url = "https://main--kramer-bu-vue-json.netlify.app/degreeInfo.json";
       //const axios = require('axios'); // alternative access to axios functions
       //axios.get(url)
-      fetch(url)
+      let headers = new Headers();
+      headers.append('Access-Control-Allow-Origin', '*');
+      fetch(url, {
+        headers: headers
+      })
           .then((response) => {
             if (response.status == 200) {
               this.degrees = response.data;
