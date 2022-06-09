@@ -43,6 +43,8 @@ export default {
             if (response.status == 200) {
               this.degrees = response.data;
               this.show = false;
+            } else {
+              this.error = "There was a problem fetching the requested data"
             }
           })
           .catch((error) => {
