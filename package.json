@@ -5,9 +5,9 @@
   "scripts": {
     "db:serve": "json-server --watch degreeInfo.json --port=3000",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "concurrently --kill-others \"vue-cli-service build\" \"npm run db:serve\"",
     "lint": "vue-cli-service lint",
-    "dev": "concurrently --kill-others \"npm run serve\" \"npm run db:serve\" \"npm run serve\""
+    "dev": "concurrently --kill-others \"npm run serve\" \"npm run db:serve\""
   },
   "dependencies": {
     "axios": "^0.27.2",
