@@ -6,7 +6,8 @@
     "db:serve": "json-server --watch degreeInfo.json --port=3000",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dev": "concurrently --kill-others \"npm run serve\" \"npm run db:serve\""
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -19,6 +20,7 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "concurrently": "^7.2.1",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3"
   },
