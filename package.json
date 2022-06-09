@@ -7,7 +7,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "dev": "concurrently --kill-others \"npm run serve\" \"npm run db:serve\""
+    "dev": "concurrently --kill-others \"npm run serve\" \"npm run db:serve\" \"npm run serve\""
   },
   "dependencies": {
     "axios": "^0.27.2",
