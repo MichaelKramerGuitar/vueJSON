@@ -41,7 +41,7 @@ export default {
       //const axios = require('axios'); // alternative access to axios functions
       //axios.get(url)
       let headers = new Headers();
-      headers.append('Access-Control-Allow-Origin', '*');
+      headers.append('Access-Control-Allow-Origin', 'https://kramer-bu-vue-json.netlify.app/');
       fetch(url, {
         headers: headers
       })
