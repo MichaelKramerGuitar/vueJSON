@@ -50,11 +50,11 @@ export default {
         }
       })
           .then((response) => {
-            if (response.statusCode == 200) {
+            if (response.status == 200) {
               this.degrees = response.data;
               this.show = false;
             } else {
-              console.log('response.status ' + response)
+              console.log('response: ' + response.data)
               this.error = "There was a problem fetching the requested data"
             }
           })
