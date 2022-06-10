@@ -38,7 +38,8 @@ export default {
     async getDegrees() {
       //const url = "http://localhost:3000/degrees";
       //const url = "https://main--kramer-bu-vue-json.netlify.app/degreeInfo.json";
-      const url = "https://main--kramer-bu-vue-json.netlify.app/degreeInfo.json";
+      //const url = "https://main--kramer-bu-vue-json.netlify.app/degreeInfo.json";
+      const url = "/api/degrees";
       //const axios = require('axios'); // alternative access to axios functions
       //axios.get(url)
       //const fetch = require("node-fetch");
@@ -53,7 +54,8 @@ export default {
       })
           .then((response) => {
             if (response.status === 200) {
-              this.degrees = response.data;
+              console.log(JSON.stringify(response))
+              this.degrees = JSON.stringify(response);
               this.show = false;
             } else {
               console.log('response: ' + response.json())
