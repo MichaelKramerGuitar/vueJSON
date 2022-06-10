@@ -6,6 +6,6 @@ exports.handler = async (event) => {
     await (event)
     return {
         statusCode: 200,
-        body: JSON.stringify(degreeInfo)
+        body: JSON.stringify(degreeInfo.degrees)
     }
 }

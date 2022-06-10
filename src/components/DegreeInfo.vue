@@ -45,7 +45,7 @@ export default {
       //
       fetch(url, {
         mode: "no-cors",
-        method: "POST",
+        method: "GET",
         headers: {
           'Access-Control-Allow-Origin': 'https://kramer-bu-vue-json.netlify.app/',
           'Access-Control-Allow-Methods': 'GET',
@@ -54,8 +54,8 @@ export default {
       })
           .then(response => response.json())
           .then(data => {
-            console.log(data.degrees)
-            this.degrees = data.degrees;
+            console.log(data)
+            this.degrees = data;
             this.show = false;
           })
           .catch(err => {
