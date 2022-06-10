@@ -45,25 +45,16 @@ export default {
       //
       fetch(url, {
         mode: "no-cors",
-        method: "GET",
+        method: "POST",
         headers: {
           'Access-Control-Allow-Origin': 'https://kramer-bu-vue-json.netlify.app/',
           'Access-Control-Allow-Methods': 'GET',
           'Access-Control-Allow-Headers': 'Content-Type, Authorization'
         }
-      })
-          .then((response) => {
-            if (response.status === 200) {
-              console.log(JSON.stringify(response))
-              this.degrees = JSON.stringify(response);
-              this.show = false;
-            } else {
-              console.log('response: ' + JSON.stringify(response))
-              this.error = "There was a problem fetching the requested data"
-            }
-          })
-          .catch((error) => {
-            this.error = error;
+      }).then(response => response.json())
+          .then(data => {
+            console.log(data)
+            this.degrees = data.degrees;
           })
     }
   }
