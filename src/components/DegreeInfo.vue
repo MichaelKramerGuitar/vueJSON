@@ -43,11 +43,12 @@ export default {
       //const axios = require('axios'); // alternative access to axios functions
       //axios.get(url)
       //const fetch = require("node-fetch");
+      //'Access-Control-Allow-Origin': 'https://kramer-bu-vue-json.netlify.app/',
       fetch(url, {
         mode: "no-cors",
         method: "GET",
         headers: {
-          'Access-Control-Allow-Origin': 'https://kramer-bu-vue-json.netlify.app/',
+          'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'GET',
           'Access-Control-Allow-Headers': 'Content-Type, Authorization'
         }
@@ -58,7 +59,7 @@ export default {
               this.degrees = JSON.stringify(response);
               this.show = false;
             } else {
-              console.log('response: ' + response.json())
+              console.log('response: ' + JSON.stringify(response))
               this.error = "There was a problem fetching the requested data"
             }
           })
