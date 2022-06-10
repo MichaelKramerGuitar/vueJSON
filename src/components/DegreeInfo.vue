@@ -41,7 +41,7 @@ export default {
       //const axios = require('axios'); // alternative access to axios functions
       //axios.get(url)
       fetch(url, {
-        mode: "cors",
+        mode: "no-cors",
         method: "GET",
         headers: {
           'Access-Control-Allow-Origin': 'https://kramer-bu-vue-json.netlify.app/',
