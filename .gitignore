@@ -24,3 +24,5 @@ pnpm-debug.log*
 
 # Boston University Assignment Requirements
 metcs601_assignment5.pdf
+# Local Netlify folder
+.netlify

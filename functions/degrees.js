@@ -2,8 +2,8 @@
 
 const degreeInfo = require('./data/degreeInfo.json');
 
-exports.handler = async (event) => {
-    await (event)
+exports.handler = async (event, context) => {
+    await (event, context)
     return {
         statusCode: 200,
         body: JSON.stringify(degreeInfo.degrees)
