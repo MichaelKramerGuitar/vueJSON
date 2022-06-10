@@ -1,4 +1,4 @@
-const degreeInfo = require('../degreeInfo.json');
+const degreeInfo = require('./data/degreeInfo.json');
 
 exports.handler = async (event) => {
     await (event)
