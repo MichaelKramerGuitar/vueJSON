@@ -51,10 +51,15 @@ export default {
           'Access-Control-Allow-Methods': 'GET',
           'Access-Control-Allow-Headers': 'Content-Type, Authorization'
         }
-      }).then(response => response.json())
+      })
+          .then(response => response.json())
           .then(data => {
-            console.log(data)
+            console.log(data.degrees)
             this.degrees = data.degrees;
+            this.show = false;
+          })
+          .catch(err => {
+            this.error = err
           })
     }
   }
