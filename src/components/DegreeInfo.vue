@@ -43,7 +43,7 @@ export default {
       fetch(url, {
         mode: "cors",
         headers: {
-          'Access-Control-Allow-Origin': '*'
+          'Access-Control-Allow-Origin': 'https://kramer-bu-vue-json.netlify.app/'
         }
       })
           .then((response) => {
