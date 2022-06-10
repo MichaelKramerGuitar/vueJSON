@@ -54,7 +54,7 @@ export default {
               this.degrees = response.data;
               this.show = false;
             } else {
-              console.log('response.status ' + response.statusCode)
+              console.log('response.status ' + response)
               this.error = "There was a problem fetching the requested data"
             }
           })
