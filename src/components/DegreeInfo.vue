@@ -42,8 +42,11 @@ export default {
       //axios.get(url)
       fetch(url, {
         mode: "cors",
+        method: "GET",
         headers: {
-          'Access-Control-Allow-Origin': 'https://kramer-bu-vue-json.netlify.app/'
+          'Access-Control-Allow-Origin': 'https://kramer-bu-vue-json.netlify.app/',
+          'Access-Control-Allow-Methods': 'GET',
+          'Access-Control-Allow-Headers': 'Content-Type, Authorization'
         }
       })
           .then((response) => {
