@@ -1,4 +1,3 @@
-<!--https://www.section.io/engineering-education/building-vuejs-app-with-json-server-and-axios/-->
 <template>
   <body>
     <div>
@@ -22,8 +21,6 @@
 
 <script>
 
-//import axios from "axios";
-
 export default {
   name: "DegreeInfo",
   data() {
@@ -36,8 +33,8 @@ export default {
   methods: {
 
     async getDegrees() {
-      //const url = "/api/degrees";
-      const url = "./degreeInfo.json";
+      //const url = "/api/degrees"; // serverless function approach - 500 err in production, works in dev
+      const url = "./degreeInfo.json"; // simple approach works in dev
       fetch(url, {
         mode: "no-cors",
         method: "GET",

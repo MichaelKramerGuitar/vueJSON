@@ -1,10 +1,16 @@
 # cs601_hw5_mgkramer
 
-## How to run 
+## How to run: Publicly hosted site (Vue app)
+[https://kramer-bu-vue-json.netlify.app/](https://kramer-bu-vue-json.netlify.app/)
+
+### Dev Servers used for testing 
 ```
 npm run dev
 ```
-## Project setup
+```
+netlify dev
+```
+### Project setup
 ```
 npm install
 ```
@@ -29,17 +35,19 @@ npm run lint
 npm run db:serve
 ```
 
-### Notes on ```npm run dev``` and Dependencies
-* see package.json 
-  * "scripts"
-    * "dev": "concurrently --kill-others \"npm run serve\" \"npm run db:serve\""
-* this command requires the concurrently library 
-  * ```npm install -g concurrently```
-* also json-server
-  * ```npm install -g json-server```
-
 ## Self created json
 * degreeInfo.json
 
+### How I went above and beyond
+* This week took a round about way
+  * First I explored hosting the json file on its own server as is seen in the package.json "scripts" with npm run db:serve command
+    * This worked well for dev but is not the solution for production
+  * Next I explored axios which let me to netlify serverless functions
+    * I left the serverless functions structure in-tact 
+    * This worked great in development with ```netlify dev```
+    * Threw 500 error in production 
+  * The simplest solution was suggested by my gracious facilitator to just through my json in the public directory and use a simple fetch and boom.
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
