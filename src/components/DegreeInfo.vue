@@ -36,7 +36,8 @@ export default {
   methods: {
 
     async getDegrees() {
-      const url = "/api/degrees";
+      //const url = "/api/degrees";
+      const url = "./degreeInfo.json";
       fetch(url, {
         mode: "no-cors",
         method: "GET",
@@ -49,7 +50,7 @@ export default {
           .then(response => response.json())
           .then(data => {
             console.log(data)
-            this.degrees = data;
+            this.degrees = data.degrees;
             this.show = false;
           })
           .catch(err => {
